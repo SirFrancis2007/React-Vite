@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import './styles/Card.css';
+
 
 function Card () {
     const [likes, setLikes] = useState(0);
@@ -21,39 +23,40 @@ function Card () {
     };
 
     return (
-        <div style={{ border: "2px solid #ccc", padding: "10px", width: "300px" }}>
-        <img
-            src="https://infozport.com/wp-content/uploads/2022/12/Argentina-Campeon.jpg"
-            alt="Post"
-            style={{ width: "100%" }}
-        />
-        <p>¡¡¡¡Argentina Campeona Del Mundo!!!! De Qatar al Mundo.</p>
-
-        {/* Reacciones */}
-        <div>
-            <button onClick={() => setLikes(likes + 1)}>❤ {likes}</button>
-            <button onClick={() => setDivierte(divierte + 1)}>😂 {divierte}</button>
-            <button onClick={() => setSorprende(sorprende + 1)}>😲 {sorprende}</button>
-        </div>
-
-        {/* Formulario */}
-        <div>
-            <input
-                type="text"
-                placeholder="Comparte tu comentario"
-                value={comentario}
-                onChange={(e) => setComentario(e.target.value)}
+        <div className='container-card'>
+            <img className='image'
+                src="https://infozport.com/wp-content/uploads/2022/12/Argentina-Campeon.jpg"
+                alt="Post"
             />
-            <button onClick={handleComentar}>Comentar</button>
-            {error && <p style={{ color: "red" }}>{error}</p>}
-        </div>
+            <div className="content">
+                <p className='Title-Post'>¡¡¡¡Argentina Campeona Del Mundo!!!! De Qatar al Mundo.</p>
 
-        {/* Lista de comentarios */}
-        <div>
-            {comentarios.map((c, index) => (
-            <p key={index}>{c}</p>
-            ))}
-        </div>
+                {/* Reacciones */}
+                <div className='container-button'>
+                    <button onClick={() => setLikes(likes + 1)}>❤️ {likes}</button>
+                    <button onClick={() => setDivierte(divierte + 1)}>😂 {divierte}</button>
+                    <button onClick={() => setSorprende(sorprende + 1)}>😲 {sorprende}</button>
+                </div>
+
+                {/* Formulario */}
+                <div className='container-form'>
+                    <input
+                        type="text"
+                        placeholder="Comparte tu comentario"
+                        value={comentario}
+                        onChange={(e) => setComentario(e.target.value)}
+                    />
+                    <button onClick={handleComentar}>Comentar</button>
+                    {error && <p style={{ color: "red" }}>{error}</p>}
+                </div>
+
+                {/* Lista de comentarios */}
+                <div className='Container-Comentarios'>
+                    {comentarios.map((c, index) => (
+                    <p key={index}>{c}</p>
+                    ))}
+                </div>
+            </div>
         </div>
     );
 }
