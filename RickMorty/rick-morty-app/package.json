@@ -1,0 +1,9 @@
+{
+  "name": "rick-morty-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "semantic-ui-css": "^2.5.0",
+    "semantic-ui-react": "^2.1.5"
+  }
+}
