@@ -15,7 +15,7 @@
 
 .card:hover {
   transform: scale(1.05);
-  background-color: #383838;
+  background-color: #252525;
 }
 
 .card img {
