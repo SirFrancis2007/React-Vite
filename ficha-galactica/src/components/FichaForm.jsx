@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "../styles/FichaForm.css";
 
 export default function FichaForm({ character }) {
   const [apodo, setApodo] = useState("");
@@ -35,11 +36,11 @@ export default function FichaForm({ character }) {
   };
 
   return (
-    <div className="p-4 bg-gray-800 rounded-xl shadow">
-      <h2 className="text-xl font-semibold mb-2">📝 Crear ficha</h2>
+    <div className="Container-Card">
+      <h2 className="frm-container">Crear ficha</h2>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
+      <form onSubmit={handleSubmit} className="class-form">
+        <div className="">
           <label>Apodo en tu ficha:</label>
           <input
             type="text"
@@ -61,11 +62,11 @@ export default function FichaForm({ character }) {
           </label>
         </div>
 
-        <button type="submit">Guardar ficha</button>
+        <button type="submit" className="btn">Guardar ficha</button>
       </form>
 
       {resumen && (
-        <div>
+        <div className="container-resumen">
           <h3> Resumen de ficha</h3>
           <p><strong>Personaje:</strong> {resumen.personaje}</p>
           <p><strong>Altura:</strong> {resumen.altura}</p>

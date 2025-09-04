@@ -1,0 +1,44 @@
+.CharacterPreview {
+    background-color:#ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    margin-bottom: 24px;
+    transition: all 0.3s ease-in-out;
+    
+  }
+  
+  .CharacterPreview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .CharacterPreview h2 {
+    font-size: 22px;
+    color: #000000;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  
+  .CharacterPreview p {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  .CharacterPreview strong {
+    color: #242424; 
+  }
+  
+  .CharacterPreview .name {
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  .CharacterPreview .height,
+  .CharacterPreview .birth_year,
+  .CharacterPreview .homeworldName {
+    color: #000000;
+  }
+  

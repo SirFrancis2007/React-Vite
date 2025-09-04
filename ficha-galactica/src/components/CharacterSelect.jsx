@@ -1,3 +1,5 @@
+import "../styles/CharacterSelect.css"
+
 export default function CharacterSelect({ characters, onSelect }) {
     const handleChange = (e) => {
       onSelect(e.target.value);

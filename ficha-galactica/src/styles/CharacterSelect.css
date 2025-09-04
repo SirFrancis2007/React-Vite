@@ -1,0 +1,38 @@
+label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  
+  select {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    width: 100%;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  select:focus {
+    border-color: #007bff;
+    background-color: #f0f8ff;
+  }
+  
+  option {
+    font-size: 14px;
+    padding: 10px;
+    background-color: #fff;
+  }
+  
+  option:disabled {
+    color: #aaa;
+  }
+  
+  select:hover {
+    border-color: #0056b3;
+  }
+  

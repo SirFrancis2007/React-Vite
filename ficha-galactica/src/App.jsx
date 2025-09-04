@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import CharacterSelect from "./components/CharacterSelect";
 import CharacterPreview from "./components/CharacterPreview";
 import FichaForm from "./components/FichaForm";
+import "./styles/App.css";
 
 export default function App() {
   const [characters, setCharacters] = useState([]);
@@ -45,8 +46,8 @@ export default function App() {
   }, [selectedUrl]);
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-6">
-      <h1 className="text-2xl font-bold mb-4">🌌 Ficha Galáctica</h1>
+    <div className="main-container">
+      <h1 className="Title-main">Ficha Galáctica</h1>
 
       <CharacterSelect
         characters={characters}
